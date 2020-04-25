@@ -11,10 +11,10 @@ def index():
     title = 'Home - Welcome to The best News Website Online'
     return render_template('index.html', title = title)
 
-@app.route('/movie/<news_id>')
-def movie(news_id):
+@app.route('/news_source/<news_source_id>')
+def news_source(news_id):
 
     '''
-    View movie page function that returns the movie details page and its data
+    View news page function that returns the news details page and its data
     '''
-    return render_template('news.html',id = news_id)
+    return render_template('news_source.html',id = news_source_id)
