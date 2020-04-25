@@ -1,54 +1,45 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
-<!DOCTYPE html>
-<html>
+<!-- Content block -->
 
-<head>
-    <meta charset="utf-8">
-    {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> Welcome to the best News website </title>
-    {% endif %}
-</head>
+{% block content %}
 
-<body>
-    <!--ABC news section-->
-    <h3>ABC News</h3>
-    <ul>
-        {{macro.displayNewsList(abc)}}
-    </ul>
 
-    <!-- TIME news section-->
-    <h3>TIME News</h3>
-    <ul>
-        {{macro.displayNewsList(time)}}
-    </ul>
+<!--ABC news section-->
+<h3>ABC News</h3>
+<ul>
+    {{macro.displayNewsList(abc)}}
+</ul>
 
-    <!--CNN news section-->
-    <h3>CNN News</h3>
-    <ul>
-        {{macro.displayNewsList(cnn)}}
-    </ul>
+<!-- TIME news section-->
+<h3>TIME News</h3>
+<ul>
+    {{macro.displayNewsList(time)}}
+</ul>
 
-    <!-- NBC news section-->
-    <h3>NBC News</h3>
-    <ul>
-        {{macro.displayNewsList(nbc)}}
-    </ul>
+<!--CNN news section-->
+<h3>CNN News</h3>
+<ul>
+    {{macro.displayNewsList(cnn)}}
+</ul>
 
-    <!-- FOX news section-->
-    <h3>FOX News</h3>
-    <ul>
-        {{macro.displayNewsList(fox)}}
-    </ul>
+<!-- NBC news section-->
+<h3>NBC News</h3>
+<ul>
+    {{macro.displayNewsList(nbc)}}
+</ul>
 
-    <!--The wallstreet journal-->
-    <h3>The Wallstreet Journal</h3>
-    <ul>
-        {{macro.displayNewsList(wallstreet)}}
-    </ul>
+<!-- FOX news section-->
+<h3>FOX News</h3>
+<ul>
+    {{macro.displayNewsList(fox)}}
+</ul>
 
-</body>
+<!--The wallstreet journal-->
+<h3>The Wallstreet Journal</h3>
+<ul>
+    {{macro.displayNewsList(wallstreet)}}
+</ul>
 
-</html>
+{% endblock%}
