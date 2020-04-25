@@ -1,3 +1,5 @@
+{% import 'macros.html' as macro%}
+
 <!DOCTYPE html>
 <html>
 
@@ -14,49 +16,37 @@
     <!--ABC news section-->
     <h3>ABC News</h3>
     <ul>
-        {% for abc_news in abc %}
-        <li>{{ abc_news.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(abc)}}
     </ul>
 
     <!-- TIME news section-->
     <h3>TIME News</h3>
     <ul>
-        {% for time_news in time %}
-        <li>{{time_news.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(time)}}
     </ul>
 
     <!--CNN news section-->
     <h3>CNN News</h3>
     <ul>
-        {% for cnn_news in cnn %}
-        <li>{{cnn_news.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(cnn)}}
     </ul>
 
     <!-- NBC news section-->
     <h3>NBC News</h3>
     <ul>
-        {% for nbc_news in nbc %}
-        <li>{{nbc_news.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(nbc)}}
     </ul>
 
     <!-- FOX news section-->
     <h3>FOX News</h3>
     <ul>
-        {% for fox_news in fox %}
-        <li>{{ fox_news.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(fox)}}
     </ul>
 
     <!--The wallstreet journal-->
     <h3>The Wallstreet Journal</h3>
     <ul>
-        {% for the_wall_street_journal in wallstreet %}
-        <li>{{the_wall_street_journal.title}}</li>
-        {% endfor %}
+        {{macro.displayNewsList(wallstreet)}}
     </ul>
 
 </body>
