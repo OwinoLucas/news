@@ -19,6 +19,14 @@
         {% endfor %}
     </ul>
 
+    <!-- TIME news section-->
+    <h3>TIME News</h3>
+    <ul>
+        {% for time_news in time %}
+        <li>{{time_news.title}}</li>
+        {% endfor %}
+    </ul>
+
     <!--CNN news section-->
     <h3>CNN News</h3>
     <ul>
@@ -27,7 +35,29 @@
         {% endfor %}
     </ul>
 
+    <!-- NBC news section-->
+    <h3>NBC News</h3>
+    <ul>
+        {% for nbc_news in nbc %}
+        <li>{{nbc_news.title}}</li>
+        {% endfor %}
+    </ul>
 
+    <!-- FOX news section-->
+    <h3>FOX News</h3>
+    <ul>
+        {% for fox_news in fox %}
+        <li>{{ fox_news.title}}</li>
+        {% endfor %}
+    </ul>
+
+    <!--The wallstreet journal-->
+    <h3>The Wallstreet Journal</h3>
+    <ul>
+        {% for the_wall_street_journal in wallstreet %}
+        <li>{{the_wall_street_journal.title}}</li>
+        {% endfor %}
+    </ul>
 
 </body>
 
