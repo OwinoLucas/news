@@ -28,3 +28,29 @@ def get_news_source(source):
 
     return news_source_results
 
+def process_results(news_source_list):
+    """
+    Function that processes the news_source result and transforms it to a list of objests
+    
+     Args:
+        news_source_list: A list of dictionaries that contain news details
+
+    Returns :
+        news_source_results: A list of news objects
+    """(
+    news_source_results = []
+    for news_source_item in news_source_list:
+        id = news_source_item.get('id')
+        name = news_source_item.get('name')
+        description = news_source_item.get('description')
+        url = news_source_item.get('url')
+        category = news_source_item.get('category')
+        country = news_source_item.get('country')
+
+        if category:
+            news_source_object = News_source(id,name,description,url,category,country)
+            news_source_results.append(news_source_object)
+
+    return news_source_results
+
+
