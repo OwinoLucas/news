@@ -5,12 +5,26 @@
 {% block content %}
 <div class="container">
 
-    <!--categories-->
-    {% for category_article in business %}
-    <h2>{{ category_article.name }}</h2>
-    <p>{{ category_article.description }}</p>
-    <button>{{ category_article.url }}</button>
-    {% endfor %}
+    <div class="row">
+        <div class="col-md-4">
+            <!--business categories-->
+            {% for category_article in business %}
+            <h2>{{ category_article.name }}</h2>
+            <p>{{ category_article.description }}</p>
+            <p>To view more details <a href="{{ category_article.url }}"><em>click here</em></a></p>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4">
+            <!--entertainment categories-->
+            {% for ent_article in entertainment %}
+            <h2>{{ ent_article.name }}</h2>
+            <p>{{ ent_article.description }}</p>
+            <p>To view more details <a href="{{ ent_article.url }}"><em>click here</em></a></p>
+            {% endfor %}
+        </div>
+    </div>
+
 
 
 </div>

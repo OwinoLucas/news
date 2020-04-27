@@ -6,6 +6,7 @@
 
         {% for news in news_source_list %}
         <p><strong>{{ news.title }}</strong></p>
+        <img src="{{news.urlToImage}}" class="img-responsive">
         <P>{{ news.content}}</P>
         <p>To view more details <a href="{{ news.url }}"><em>click here</em></a></p>
         <p>Published on :{{ news.publishedAt|truncate(13)}}</p>
