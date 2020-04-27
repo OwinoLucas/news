@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Articles {% endblock %}
+<!--Content block -->
+{% block content %}
+<div class="container">
+
+    <!--categories-->
+    {% for category_article in business %}
+    <h2>{{ category_article.name }}</h2>
+    <p>{{ category_article.description }}</p>
+    <button>{{ category_article.url }}</button>
+    {% endfor %}
+
+
+</div>
+{% endblock %}

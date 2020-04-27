@@ -1,7 +1,19 @@
 {% macro displayNewsList(news_source_list) %}
 
-{% for news in news_source_list %}
-<li>{{ news.title}}</li>
-{% endfor %}
+<div class="container">
+
+    <div class="text-center">
+
+        {% for news in news_source_list %}
+        <p><strong>{{ news.title }}</strong></p>
+        <P>{{ news.content}}</P>
+        <p>To view more details <a href="{{ news.url }}"><em>click here</em></a></p>
+        <p>Published on :{{ news.publishedAt|truncate(13)}}</p>
+        {% endfor %}
+
+    </div>
+
+</div>
+
 
 {% endmacro %}

@@ -1,51 +1,63 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
+{% block title %} Home Page {% endblock%}
+
 <!-- Content block -->
 
 {% block content %}
 
 
 <!--ABC news section-->
-<h3>ABC News</h3>
-<ul>
-    {{macro.displayNewsList(abc)}}
-</ul>
+<div class="container">
+    <h1 class="text-center">ABC News</h1>
+    <p>
 
-<!-- TIME news section-->
-<h3>TIME News</h3>
-<ul>
-    {{macro.displayNewsList(time)}}
-</ul>
+        {{macro.displayNewsList(abc)}}
+    </p>
 
-<!--CNN news section-->
-<h3>CNN News</h3>
-<ul>
-    {{macro.displayNewsList(cnn)}}
-</ul>
+    <!-- TIME news section-->
+    <h1 class="text-center">TIME News</h1>
+    <p>
 
-<!-- NBC news section-->
-<h3>NBC News</h3>
-<ul>
-    {{macro.displayNewsList(nbc)}}
-</ul>
+        {{macro.displayNewsList(time)}}
+    </p>
 
-<!-- FOX news section-->
-<h3>FOX News</h3>
-<ul>
-    {{macro.displayNewsList(fox)}}
-</ul>
+    <!--CNN news section-->
+    <h1 class="text-center">CNN News</h1>
+    <p>
 
-<!--The wallstreet journal-->
-<h3>The Wallstreet Journal</h3>
-<ul>
-    {{macro.displayNewsList(wallstreet)}}
-</ul>
+        {{macro.displayNewsList(cnn)}}
+    </p>
 
-<!-- ESPN news-->
-<h3>ESPN news</h3>
-<ul>
-    {{macro.displayNewsList(espn)}}
-</ul>
+    <!-- NBC news section-->
+    <h1 class="text-center">NBC News</h1>
+    <p>
+
+        {{macro.displayNewsList(nbc)}}
+    </p>
+
+    <!-- FOX news section-->
+    <h1 class="text-center">FOX News</h1>
+    <p>
+
+        {{macro.displayNewsList(fox)}}
+    </p>
+
+    <!--The wallstreet journal-->
+    <h1 class="text-center">The wallstreet Journal</h1>
+    <p>
+
+        {{macro.displayNewsList(wallstreet)}}
+    </p>
+
+    <!-- ESPN news-->
+    <h1 class="text-center">ESPN News</h1>
+    <p>
+
+        {{macro.displayNewsList(espn)}}
+    </p>
+
+</div>
 
 {% endblock%}
