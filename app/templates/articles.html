@@ -6,21 +6,33 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <!--business categories-->
-            {% for category_article in business %}
-            <h2>{{ category_article.name }}</h2>
-            <p>{{ category_article.description }}</p>
-            <p>To view more details <a href="{{ category_article.url }}"><em>click here</em></a></p>
+            <h2> <u>USA Articles</u> </h2>
+            {% for usa_article in us %}
+            <h1><strong>{{ usa_article.title }}</strong></h1>
+            <img src="{{usa_article.urlToImage}}" class="img-responsive">
+            <p><u><strong>{{ usa_article.description }}</strong></u></p>
+            <p>{{ usa_article.content }}</p>
+            <p>To view more details <a href="{{ usa_article.url }}"><em>click here</em></a></p>
+            <div class="blockquote-footer">
+                {{ usa_article.publishedAt }}
+            </div>
             {% endfor %}
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <!--entertainment categories-->
-            {% for ent_article in entertainment %}
-            <h2>{{ ent_article.name }}</h2>
-            <p>{{ ent_article.description }}</p>
-            <p>To view more details <a href="{{ ent_article.url }}"><em>click here</em></a></p>
+            <h2> <u>UK Articles</u> </h2>
+            {% for uk_article in gb %}
+            <h1><strong>{{ uk_article.title }}</strong></h1>
+            <img src="{{uk_article.urlToImage}}" class="img-responsive">
+            <p><u><strong>{{ uk_article.description }}</strong></u></p>
+            <p>{{ uk_article.content }}</p>
+            <p>To view more details <a href="{{ uk_article.url }}"><em>click here</em></a></p>
+            <div class="blockquote-footer">
+                {{ uk_article.publishedAt }}
+            </div>
             {% endfor %}
         </div>
     </div>
