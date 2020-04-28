@@ -3,4 +3,4 @@ NEWS_API_KEY='6467f60f55ef47f4a6348aa5e9f91ccf'
 
 #FLASK_APP=manager.py flask run
 
-python3.6 manager.py server
+python3.6 manage.py server
