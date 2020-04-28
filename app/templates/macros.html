@@ -13,9 +13,9 @@
                 <p><u><strong>{{ news.description}}</strong></u></p>
                 <P>{{ news.content }}</P>
                 <p>To view more details <a href="{{ news.url }}"><em>click here</em></a></p>
-                <div class="blochquote-footer">
-                    <p>Published on :{{ news.publishedAt}}</p>
-                </div>
+                <blockquote class="blockquote text-right">
+                    <footer class="blockquote-footer">Published on :{{ news.publishedAt}}</footer>
+                </blockquote>
                 {% endfor %}
 
             </div>

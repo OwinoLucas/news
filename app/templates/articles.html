@@ -15,9 +15,9 @@
             <p><u><strong>{{ usa_article.description }}</strong></u></p>
             <p>{{ usa_article.content }}</p>
             <p>To view more details <a href="{{ usa_article.url }}"><em>click here</em></a></p>
-            <div class="blockquote-footer">
-                {{ usa_article.publishedAt }}
-            </div>
+            <blockquote class="blockquote text-right">
+                <footer class="blockquote-footer">{{ usa_article.publishedAt }}</footer>
+            </blockquote>
             {% endfor %}
         </div>
 
@@ -30,9 +30,9 @@
             <p><u><strong>{{ uk_article.description }}</strong></u></p>
             <p>{{ uk_article.content }}</p>
             <p>To view more details <a href="{{ uk_article.url }}"><em>click here</em></a></p>
-            <div class="blockquote-footer">
-                {{ uk_article.publishedAt }}
-            </div>
+            <blockquote class="blockquote text-right">
+                <footer class="blockquote-footer">{{ uk_article.publishedAt }}</footer>
+            </blockquote>
             {% endfor %}
         </div>
     </div>
